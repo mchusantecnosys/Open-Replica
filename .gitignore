@@ -1,0 +1,25 @@
+# Dependencies & Build Output
+node_modules/
+/dist
+/out-tsc
+/.angular/cache
+
+# Python Bytecode (for .agents/skills & .opencode/skills verifiers)
+__pycache__/
+*.py[cod]
+
+# Headless Browser Verification Cache
+.playwright-cli/
+
+# Environment, API Keys & Credentials (Never Commit)
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+*credentials*.json
+*secret*
+
+# OS Metadata
+.DS_Store
+Thumbs.db

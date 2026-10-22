@@ -1,0 +1,6 @@
+{
+  "summary":  "Plan de implementacion completo para Replica Skill Workbench (OpenCode + Google Antigravity) con simulador del pipeline de 11 etapas, laboratorio determinista para los 5 motores en Python (parity.py, imgdiff.py, reviews.py, listing.py, sweep.py), comparador visual Clean-Room vs Original con soporte de targets personalizados, explorador de artefactos replica/, y generador/exportador completo de los 11 archivos SKILL.md, los 5 scripts en Python e install.sh.",
+  "updatedAt":  "2026-10-21T23:20:28.461675489Z",
+  "requestFeedback":  true,
+  "userFacing":  true
+}

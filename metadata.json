@@ -1,0 +1,8 @@
+{
+  "name": "Open Replica Skill",
+  "description": "Eleven universal agent skills and 5 deterministic Python verifiers for OpenCode and Google Antigravity IDE/CLI to reverse-engineer, rebuild clean-room, test, improve, and ship any application.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

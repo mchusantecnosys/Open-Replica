@@ -1,0 +1,876 @@
+<div class="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-emerald-500/30">
+  <!-- TOP NAVIGATION BAR (Strict 3-Zone Top Bar Contract) -->
+  <header class="sticky top-0 z-30 border-b border-slate-800/80 bg-slate-950/90 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-8">
+      <!-- Zone 1: Single text element wordmark -->
+      <a
+        href="#install"
+        (click)="scrollToSection('install'); $event.preventDefault()"
+        class="text-lg font-bold tracking-tight text-white font-display whitespace-nowrap shrink-0"
+      >
+        replica-skill
+      </a>
+
+      <!-- Zone 2: 4 concise single-line navigation links -->
+      <nav aria-label="Primary Documentation Navigation" class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-400">
+        <a
+          href="#install"
+          (click)="scrollToSection('install'); $event.preventDefault()"
+          class="hover:text-white hover:underline underline-offset-4 transition-colors whitespace-nowrap shrink-0"
+        >
+          Install
+        </a>
+        <a
+          href="#skills"
+          (click)="scrollToSection('skills'); $event.preventDefault()"
+          class="hover:text-white hover:underline underline-offset-4 transition-colors whitespace-nowrap shrink-0"
+        >
+          11 Skills
+        </a>
+        <a
+          href="#verifiers"
+          (click)="scrollToSection('verifiers'); $event.preventDefault()"
+          class="hover:text-white hover:underline underline-offset-4 transition-colors whitespace-nowrap shrink-0"
+        >
+          Python Verifiers
+        </a>
+        <a
+          href="#artifacts"
+          (click)="scrollToSection('artifacts'); $event.preventDefault()"
+          class="hover:text-white hover:underline underline-offset-4 transition-colors whitespace-nowrap shrink-0"
+        >
+          Artifact Spec
+        </a>
+      </nav>
+
+      <!-- Zone 3: 1 primary action -->
+      <div class="flex items-center shrink-0">
+        <button
+          type="button"
+          (click)="downloadBundleSh()"
+          class="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold text-slate-950 bg-emerald-400 hover:bg-emerald-300 rounded-lg transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+        >
+          <mat-icon class="!w-4 !h-4 !text-[16px] !leading-4">download</mat-icon>
+          <span>Download Skill Bundle</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-12 space-y-20">
+    <!-- =======================================================================
+         SECTION 1: HERO & INTERACTIVE INSTALLER FOR OPENCODE & ANTIGRAVITY
+    ======================================================================= -->
+    <section id="install" class="scroll-mt-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+        <!-- Left Column: Open-Source Package Proposition -->
+        <div class="lg:col-span-5 flex flex-col justify-between space-y-8">
+          <div class="space-y-5">
+            <!-- Quiet unboxed metadata line (Zero-Pill Discipline) -->
+            <div class="flex flex-wrap items-center gap-2 text-xs text-slate-400 font-mono">
+              <span class="text-emerald-400 font-semibold">OpenCode &amp; Google Antigravity IDE/CLI</span>
+              <span aria-hidden="true">·</span>
+              <span>11 Agent Skills</span>
+              <span aria-hidden="true">·</span>
+              <span>Python 3.8+ Stdlib</span>
+              <span aria-hidden="true">·</span>
+              <span>MIT License</span>
+            </div>
+
+            <h1
+              class="text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight text-white font-display leading-[1.14]"
+              style="text-wrap: balance"
+            >
+              Eleven agent skills to clone, verify, and outperform any app.
+            </h1>
+
+            <p class="text-base text-slate-300 leading-relaxed max-w-[65ch]">
+              Install the complete <code class="text-emerald-300 font-mono text-sm">/replica-*</code> skill suite
+              directly into <strong>OpenCode</strong> and <strong>Google Antigravity</strong>. Reverse-engineer any
+              application from public screens, rebuild it clean-room with multi-user security, run 5 deterministic
+              Python gates, fix verified 1-to-3 star user complaints, and deploy with zero brand leaks.
+            </p>
+          </div>
+
+          <!-- Package Architecture Highlights (Unboxed Hairline List) -->
+          <div class="border-t border-slate-800/80 pt-6 space-y-4">
+            <div class="grid grid-cols-3 gap-4">
+              <div>
+                <div class="text-2xl font-bold text-white font-mono tabular-nums">11</div>
+                <div class="text-xs text-slate-400 mt-0.5">Universal SKILL.md commands</div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold text-white font-mono tabular-nums">5</div>
+                <div class="text-xs text-slate-400 mt-0.5">Zero-pip Python 3.8+ verifiers</div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold text-white font-mono tabular-nums">0</div>
+                <div class="text-xs text-slate-400 mt-0.5">API keys or signups required</div>
+              </div>
+            </div>
+
+            <div class="pt-2 flex flex-wrap items-center gap-3">
+              <button
+                type="button"
+                (click)="downloadBundleSh()"
+                class="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-semibold text-slate-950 bg-emerald-400 hover:bg-emerald-300 rounded-lg transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+              >
+                <mat-icon class="!w-4 !h-4 !text-[16px] !leading-4">terminal</mat-icon>
+                <span>Download replica-skill-bundle.sh</span>
+              </button>
+
+              <button
+                type="button"
+                (click)="downloadInstallSh()"
+                class="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-medium text-slate-200 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-lg transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+              >
+                <mat-icon class="!w-4 !h-4 !text-[16px] !leading-4">description</mat-icon>
+                <span>Download install.sh</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Installation Builder -->
+        <div class="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-xl p-6 flex flex-col justify-between space-y-6">
+          <div class="space-y-5">
+            <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-800 pb-4">
+              <div>
+                <h2 class="text-base font-semibold text-white font-display">
+                  01. Interactive Skill Installer
+                </h2>
+                <p class="text-xs text-slate-400 mt-0.5">
+                  Configure your target AI coding agent and installation scope to generate the exact setup commands.
+                </p>
+              </div>
+              <span class="text-xs font-mono text-slate-400">
+                Requires Python 3.8+ · No pip install
+              </span>
+            </div>
+
+            <!-- Controls Grid: Agent Target & Scope -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- Target Agent Selector -->
+              <div class="space-y-2">
+                <span id="agent-env-label" class="block text-xs font-medium text-slate-300">
+                  Target AI Agent Environment
+                </span>
+                <div class="flex items-center gap-1 p-1 bg-slate-950 border border-slate-800 rounded-lg" role="group" aria-labelledby="agent-env-label">
+                  <button
+                    type="button"
+                    (click)="setAgent('both')"
+                    [class]="selectedAgent() === 'both'
+                      ? 'flex-1 px-2.5 py-1.5 text-xs font-semibold rounded-md bg-emerald-500 text-slate-950 transition-colors whitespace-nowrap shrink-0 cursor-pointer'
+                      : 'flex-1 px-2.5 py-1.5 text-xs font-medium rounded-md text-slate-400 hover:text-white transition-colors whitespace-nowrap shrink-0 cursor-pointer'"
+                  >
+                    Both Agents
+                  </button>
+                  <button
+                    type="button"
+                    (click)="setAgent('opencode')"
+                    [class]="selectedAgent() === 'opencode'
+                      ? 'flex-1 px-2.5 py-1.5 text-xs font-semibold rounded-md bg-emerald-500 text-slate-950 transition-colors whitespace-nowrap shrink-0 cursor-pointer'
+                      : 'flex-1 px-2.5 py-1.5 text-xs font-medium rounded-md text-slate-400 hover:text-white transition-colors whitespace-nowrap shrink-0 cursor-pointer'"
+                  >
+                    OpenCode
+                  </button>
+                  <button
+                    type="button"
+                    (click)="setAgent('antigravity')"
+                    [class]="selectedAgent() === 'antigravity'
+                      ? 'flex-1 px-2.5 py-1.5 text-xs font-semibold rounded-md bg-emerald-500 text-slate-950 transition-colors whitespace-nowrap shrink-0 cursor-pointer'
+                      : 'flex-1 px-2.5 py-1.5 text-xs font-medium rounded-md text-slate-400 hover:text-white transition-colors whitespace-nowrap shrink-0 cursor-pointer'"
+                  >
+                    Antigravity
+                  </button>
+                </div>
+              </div>
+
+              <!-- Installation Scope Selector -->
+              <div class="space-y-2">
+                <span id="install-scope-label" class="block text-xs font-medium text-slate-300">
+                  Installation Scope
+                </span>
+                <div class="flex items-center gap-1 p-1 bg-slate-950 border border-slate-800 rounded-lg" role="group" aria-labelledby="install-scope-label">
+                  <button
+                    type="button"
+                    (click)="setScope('global')"
+                    [class]="selectedScope() === 'global'
+                      ? 'flex-1 px-3 py-1.5 text-xs font-semibold rounded-md bg-emerald-500 text-slate-950 transition-colors whitespace-nowrap shrink-0 cursor-pointer'
+                      : 'flex-1 px-3 py-1.5 text-xs font-medium rounded-md text-slate-400 hover:text-white transition-colors whitespace-nowrap shrink-0 cursor-pointer'"
+                  >
+                    Global (~/.config)
+                  </button>
+                  <button
+                    type="button"
+                    (click)="setScope('local')"
+                    [class]="selectedScope() === 'local'
+                      ? 'flex-1 px-3 py-1.5 text-xs font-semibold rounded-md bg-emerald-500 text-slate-950 transition-colors whitespace-nowrap shrink-0 cursor-pointer'
+                      : 'flex-1 px-3 py-1.5 text-xs font-medium rounded-md text-slate-400 hover:text-white transition-colors whitespace-nowrap shrink-0 cursor-pointer'"
+                  >
+                    Project Local (./)
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Optional Project Directory Input when Scope is Local -->
+            @if (selectedScope() === 'local') {
+              <div class="space-y-1.5">
+                <label for="local-dir-input" class="block text-xs font-medium text-slate-300">
+                  Target Project Directory Path
+                </label>
+                <input
+                  id="local-dir-input"
+                  type="text"
+                  [value]="customLocalDir()"
+                  (input)="onLocalDirInput($event)"
+                  placeholder="."
+                  class="w-full px-3 py-2 text-xs font-mono bg-slate-950 border border-slate-800 rounded-lg text-slate-100 focus:outline-none focus:border-emerald-500"
+                />
+              </div>
+            }
+
+            <!-- Installation Method Tabs -->
+            <div class="space-y-3">
+              <div class="flex flex-wrap items-center gap-1 border-b border-slate-800 pb-2" role="tablist" aria-label="Installation Method">
+                <button
+                  type="button"
+                  role="tab"
+                  [attr.aria-selected]="selectedInstallMethod() === 'prompt'"
+                  (click)="setInstallMethod('prompt')"
+                  [class]="selectedInstallMethod() === 'prompt'
+                    ? 'px-3 py-1.5 text-xs font-semibold rounded-md bg-slate-800 text-emerald-300 transition-colors whitespace-nowrap shrink-0 cursor-pointer'
+                    : 'px-3 py-1.5 text-xs font-medium rounded-md text-slate-400 hover:text-slate-200 transition-colors whitespace-nowrap shrink-0 cursor-pointer'"
+                >
+                  Method A: Paste into Agent
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  [attr.aria-selected]="selectedInstallMethod() === 'curl'"
+                  (click)="setInstallMethod('curl')"
+                  [class]="selectedInstallMethod() === 'curl'
+                    ? 'px-3 py-1.5 text-xs font-semibold rounded-md bg-slate-800 text-emerald-300 transition-colors whitespace-nowrap shrink-0 cursor-pointer'
+                    : 'px-3 py-1.5 text-xs font-medium rounded-md text-slate-400 hover:text-slate-200 transition-colors whitespace-nowrap shrink-0 cursor-pointer'"
+                >
+                  Method B: One-Line curl
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  [attr.aria-selected]="selectedInstallMethod() === 'clone'"
+                  (click)="setInstallMethod('clone')"
+                  [class]="selectedInstallMethod() === 'clone'
+                    ? 'px-3 py-1.5 text-xs font-semibold rounded-md bg-slate-800 text-emerald-300 transition-colors whitespace-nowrap shrink-0 cursor-pointer'
+                    : 'px-3 py-1.5 text-xs font-medium rounded-md text-slate-400 hover:text-slate-200 transition-colors whitespace-nowrap shrink-0 cursor-pointer'"
+                >
+                  Method C: Git Clone &amp; ./install.sh
+                </button>
+              </div>
+
+              <!-- Method A: Direct Agent Prompt -->
+              @if (selectedInstallMethod() === 'prompt') {
+                <div class="space-y-2">
+                  <div class="flex items-center justify-between gap-2">
+                    <span class="text-xs text-slate-400">
+                      Paste this prompt directly into OpenCode TUI or Google Antigravity Agent chat:
+                    </span>
+                    <button
+                      type="button"
+                      (click)="copyText('install-prompt', installCommands().agentPrompt)"
+                      class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium text-emerald-300 bg-slate-950 hover:bg-slate-800 border border-slate-800 rounded-md transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+                    >
+                      <mat-icon class="!w-3.5 !h-3.5 !text-[14px] !leading-3.5">
+                        {{ copiedKey() === 'install-prompt' ? 'check' : 'content_copy' }}
+                      </mat-icon>
+                      <span>{{ copiedKey() === 'install-prompt' ? 'Copied Prompt' : 'Copy Agent Prompt' }}</span>
+                    </button>
+                  </div>
+                  <pre class="p-3.5 bg-slate-950 border border-slate-800 rounded-lg text-xs font-mono text-emerald-300 overflow-x-auto whitespace-pre-wrap break-all">{{ installCommands().agentPrompt }}</pre>
+                </div>
+              }
+
+              <!-- Method B: One-Line curl Installer -->
+              @if (selectedInstallMethod() === 'curl') {
+                <div class="space-y-2">
+                  <div class="flex items-center justify-between gap-2">
+                    <span class="text-xs text-slate-400">
+                      Run in your terminal to extract and install all 11 skills and 5 Python verifiers:
+                    </span>
+                    <button
+                      type="button"
+                      (click)="copyText('install-curl', installCommands().curlOneLiner)"
+                      class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium text-emerald-300 bg-slate-950 hover:bg-slate-800 border border-slate-800 rounded-md transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+                    >
+                      <mat-icon class="!w-3.5 !h-3.5 !text-[14px] !leading-3.5">
+                        {{ copiedKey() === 'install-curl' ? 'check' : 'content_copy' }}
+                      </mat-icon>
+                      <span>{{ copiedKey() === 'install-curl' ? 'Copied Command' : 'Copy curl Command' }}</span>
+                    </button>
+                  </div>
+                  <pre class="p-3.5 bg-slate-950 border border-slate-800 rounded-lg text-xs font-mono text-emerald-300 overflow-x-auto whitespace-pre-wrap break-all">{{ installCommands().curlOneLiner }}</pre>
+                </div>
+              }
+
+              <!-- Method C: Git Clone & install.sh -->
+              @if (selectedInstallMethod() === 'clone') {
+                <div class="space-y-2">
+                  <div class="flex items-center justify-between gap-2">
+                    <span class="text-xs text-slate-400">
+                      Clone the repository and run the included <code class="font-mono text-slate-200">install.sh</code> script:
+                    </span>
+                    <button
+                      type="button"
+                      (click)="copyText('install-clone', installCommands().gitCloneCommands)"
+                      class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium text-emerald-300 bg-slate-950 hover:bg-slate-800 border border-slate-800 rounded-md transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+                    >
+                      <mat-icon class="!w-3.5 !h-3.5 !text-[14px] !leading-3.5">
+                        {{ copiedKey() === 'install-clone' ? 'check' : 'content_copy' }}
+                      </mat-icon>
+                      <span>{{ copiedKey() === 'install-clone' ? 'Copied Commands' : 'Copy Clone Commands' }}</span>
+                    </button>
+                  </div>
+                  <pre class="p-3.5 bg-slate-950 border border-slate-800 rounded-lg text-xs font-mono text-emerald-300 overflow-x-auto">{{ installCommands().gitCloneCommands }}</pre>
+                </div>
+              }
+            </div>
+          </div>
+
+          <!-- Destination Paths & Post-Install Verification -->
+          <div class="border-t border-slate-800 pt-4 space-y-2">
+            <div class="text-xs font-medium text-slate-300">
+              Installed Skill Directories ({{ selectedScope() === 'global' ? 'Global User Config' : 'Project Workspace' }}):
+            </div>
+            <div class="space-y-1">
+              @for (p of installCommands().targetPaths; track p) {
+                <div class="text-xs font-mono text-slate-400 flex items-center gap-2">
+                  <span class="text-emerald-400">→</span>
+                  <span>{{ p }}</span>
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 2: THE 11 AGENT SKILLS CATALOG & SKILL.MD INSPECTOR
+    ======================================================================= -->
+    <section id="skills" class="scroll-mt-24 space-y-6">
+      <div class="flex flex-col xl:flex-row xl:items-end justify-between gap-4 border-b border-slate-800 pb-5">
+        <div>
+          <h2 class="text-2xl font-bold text-white font-display tracking-tight">
+            02. Eleven Agent Skills Pipeline
+          </h2>
+          <p class="text-sm text-slate-400 mt-1 max-w-[65ch]">
+            Each skill is a self-contained <code class="font-mono text-slate-200">SKILL.md</code> specification that
+            reads and writes state in the <code class="font-mono text-slate-200">replica/</code> folder so you can run
+            the entire 11-stage flow or invoke individual slash commands on demand.
+          </p>
+        </div>
+
+        <!-- Phase Filter & Search Controls -->
+        <div class="flex flex-wrap sm:flex-nowrap items-center gap-2.5 shrink-0">
+          <div class="flex items-center gap-1 p-1 bg-slate-900 border border-slate-800 rounded-lg" role="group" aria-label="Filter skills by pipeline phase">
+            <button
+              type="button"
+              (click)="setPhaseFilter('all')"
+              [class]="skillPhaseFilter() === 'all'
+                ? 'px-3 py-1.5 text-xs font-semibold rounded-md bg-emerald-500 text-slate-950 transition-colors whitespace-nowrap shrink-0 cursor-pointer'
+                : 'px-3 py-1.5 text-xs font-medium rounded-md text-slate-400 hover:text-white transition-colors whitespace-nowrap shrink-0 cursor-pointer'"
+            >
+              All 11
+            </button>
+            <button
+              type="button"
+              (click)="setPhaseFilter('recon-design')"
+              [class]="skillPhaseFilter() === 'recon-design'
+                ? 'px-3 py-1.5 text-xs font-semibold rounded-md bg-emerald-500 text-slate-950 transition-colors whitespace-nowrap shrink-0 cursor-pointer'
+                : 'px-3 py-1.5 text-xs font-medium rounded-md text-slate-400 hover:text-white transition-colors whitespace-nowrap shrink-0 cursor-pointer'"
+            >
+              01–03 Recon &amp; Design
+            </button>
+            <button
+              type="button"
+              (click)="setPhaseFilter('build-verify')"
+              [class]="skillPhaseFilter() === 'build-verify'
+                ? 'px-3 py-1.5 text-xs font-semibold rounded-md bg-emerald-500 text-slate-950 transition-colors whitespace-nowrap shrink-0 cursor-pointer'
+                : 'px-3 py-1.5 text-xs font-medium rounded-md text-slate-400 hover:text-white transition-colors whitespace-nowrap shrink-0 cursor-pointer'"
+            >
+              04–07 Build &amp; Diff
+            </button>
+            <button
+              type="button"
+              (click)="setPhaseFilter('improve-ship')"
+              [class]="skillPhaseFilter() === 'improve-ship'
+                ? 'px-3 py-1.5 text-xs font-semibold rounded-md bg-emerald-500 text-slate-950 transition-colors whitespace-nowrap shrink-0 cursor-pointer'
+                : 'px-3 py-1.5 text-xs font-medium rounded-md text-slate-400 hover:text-white transition-colors whitespace-nowrap shrink-0 cursor-pointer'"
+            >
+              08–11 Improve &amp; Ship
+            </button>
+          </div>
+
+          <div class="relative">
+            <label for="skill-search" class="sr-only">Search skills</label>
+            <input
+              id="skill-search"
+              type="search"
+              [value]="skillSearchQuery()"
+              (input)="onSearchInput($event)"
+              placeholder="Search /replica-..."
+              class="w-48 sm:w-56 px-3 py-1.5 text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-emerald-500"
+            />
+          </div>
+        </div>
+      </div>
+
+      @if (filteredSkills().length === 0) {
+        <!-- Empty State when Search Matches Nothing -->
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-10 text-center space-y-3">
+          <div class="text-sm font-semibold text-white">
+            No skills match "{{ skillSearchQuery() }}"
+          </div>
+          <p class="text-xs text-slate-400">
+            Try searching by slash command (e.g. <code class="font-mono">/replica-diff</code>) or verifier script (<code class="font-mono">parity.py</code>).
+          </p>
+          <button
+            type="button"
+            (click)="clearSearch()"
+            class="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-slate-950 bg-emerald-400 hover:bg-emerald-300 rounded-lg transition-colors cursor-pointer"
+          >
+            <mat-icon class="!w-4 !h-4 !text-[16px] !leading-4">refresh</mat-icon>
+            <span>Reset Filters</span>
+          </button>
+        </div>
+      } @else {
+        <!-- Master-Detail 11 Skills Explorer -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          <!-- Left Column: Ordered Skill List (01..11) -->
+          <div class="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-xl divide-y divide-slate-800/80 overflow-hidden">
+            @for (skill of filteredSkills(); track skill.id) {
+              <button
+                type="button"
+                (click)="selectSkill(skill.id)"
+                [class]="selectedSkill().id === skill.id
+                  ? 'w-full text-left p-4 bg-slate-800/70 transition-colors flex items-start gap-3.5 cursor-pointer'
+                  : 'w-full text-left p-4 hover:bg-slate-800/30 transition-colors flex items-start gap-3.5 cursor-pointer'"
+              >
+                <span
+                  [class]="selectedSkill().id === skill.id
+                    ? 'font-mono text-xs font-bold text-emerald-400 tabular-nums mt-0.5 shrink-0'
+                    : 'font-mono text-xs text-slate-500 tabular-nums mt-0.5 shrink-0'"
+                >
+                  {{ skill.stepFormatted }}.
+                </span>
+                <div class="flex-1 min-w-0 space-y-1">
+                  <div class="flex items-center justify-between gap-2">
+                    <span class="font-mono text-sm font-semibold text-white truncate">
+                      {{ skill.slash }}
+                    </span>
+                    <span class="text-[11px] font-mono text-slate-400 truncate">
+                      {{ skill.verifierScript ? skill.verifierScript : 'Agent Skill' }}
+                    </span>
+                  </div>
+                  <div class="text-xs font-medium text-slate-300">
+                    {{ skill.name }}
+                  </div>
+                  <div class="text-xs text-slate-400 line-clamp-2">
+                    {{ skill.summary }}
+                  </div>
+                </div>
+              </button>
+            }
+          </div>
+
+          <!-- Right Column: Active Skill Documentation & Raw SKILL.md Reader -->
+          <div class="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-xl p-6 space-y-6">
+            @let activeSkill = selectedSkill();
+
+            <!-- Skill Header & Actions -->
+            <div class="flex flex-wrap items-start justify-between gap-4 border-b border-slate-800 pb-5">
+              <div class="space-y-1.5">
+                <div class="flex flex-wrap items-center gap-2 text-xs font-mono text-slate-400">
+                  <span class="text-emerald-400 font-semibold">Stage {{ activeSkill.stepFormatted }} of 11</span>
+                  <span aria-hidden="true">·</span>
+                  <span>{{ activeSkill.phaseLabel }}</span>
+                  @if (activeSkill.verifierScript) {
+                    <span aria-hidden="true">·</span>
+                    <span class="text-amber-300">Verifier: {{ activeSkill.verifierScript }}</span>
+                  }
+                </div>
+                <h3 class="text-2xl font-bold text-white font-mono tracking-tight">
+                  {{ activeSkill.slash }}
+                </h3>
+                <p class="text-sm font-medium text-slate-200">
+                  {{ activeSkill.name }}
+                </p>
+              </div>
+
+              <div class="flex flex-wrap items-center gap-2">
+                <!-- Segmented Toggle: Specification vs Raw SKILL.md -->
+                <div class="flex items-center gap-1 p-1 bg-slate-950 border border-slate-800 rounded-lg">
+                  <button
+                    type="button"
+                    (click)="setSkillViewMode('overview')"
+                    [class]="skillViewMode() === 'overview'
+                      ? 'px-2.5 py-1 text-xs font-semibold rounded bg-emerald-500 text-slate-950 transition-colors whitespace-nowrap shrink-0 cursor-pointer'
+                      : 'px-2.5 py-1 text-xs font-medium rounded text-slate-400 hover:text-white transition-colors whitespace-nowrap shrink-0 cursor-pointer'"
+                  >
+                    Protocol View
+                  </button>
+                  <button
+                    type="button"
+                    (click)="setSkillViewMode('raw')"
+                    [class]="skillViewMode() === 'raw'
+                      ? 'px-2.5 py-1 text-xs font-semibold rounded bg-emerald-500 text-slate-950 transition-colors whitespace-nowrap shrink-0 cursor-pointer'
+                      : 'px-2.5 py-1 text-xs font-medium rounded text-slate-400 hover:text-white transition-colors whitespace-nowrap shrink-0 cursor-pointer'"
+                  >
+                    Raw SKILL.md
+                  </button>
+                </div>
+
+                <button
+                  type="button"
+                  (click)="copyText('skill-md-' + activeSkill.id, activeSkill.skillMarkdown)"
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-200 bg-slate-950 hover:bg-slate-800 border border-slate-800 rounded-lg transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+                >
+                  <mat-icon class="!w-3.5 !h-3.5 !text-[14px] !leading-3.5">
+                    {{ copiedKey() === 'skill-md-' + activeSkill.id ? 'check' : 'content_copy' }}
+                  </mat-icon>
+                  <span>{{ copiedKey() === 'skill-md-' + activeSkill.id ? 'Copied' : 'Copy SKILL.md' }}</span>
+                </button>
+
+                <button
+                  type="button"
+                  (click)="downloadSelectedSkill()"
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-200 bg-slate-950 hover:bg-slate-800 border border-slate-800 rounded-lg transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+                >
+                  <mat-icon class="!w-3.5 !h-3.5 !text-[14px] !leading-3.5">download</mat-icon>
+                  <span>Download</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- File Path & I/O Metadata Bar -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 py-3 px-4 bg-slate-950 border border-slate-800 rounded-lg text-xs">
+              <div>
+                <span class="text-slate-400 block">Installed Path</span>
+                <code class="font-mono text-slate-200 mt-0.5 block truncate">.agents/skills/{{ activeSkill.id }}/SKILL.md</code>
+              </div>
+              <div>
+                <span class="text-slate-400 block">Reads From</span>
+                <code class="font-mono text-slate-200 mt-0.5 block truncate">
+                  {{ activeSkill.readsArtifacts.length ? activeSkill.readsArtifacts.join(', ') : 'User Target URL / App' }}
+                </code>
+              </div>
+              <div>
+                <span class="text-slate-400 block">Writes Artifact</span>
+                <code class="font-mono text-emerald-300 mt-0.5 block truncate">{{ activeSkill.writesArtifact }}</code>
+              </div>
+            </div>
+
+            @if (skillViewMode() === 'overview') {
+              <div class="space-y-6">
+                <!-- Invocation Examples in OpenCode & Antigravity -->
+                <div class="space-y-2">
+                  <div class="flex items-center justify-between">
+                    <h4 class="text-xs font-semibold text-slate-300">
+                      How to Invoke in OpenCode &amp; Google Antigravity
+                    </h4>
+                    <button
+                      type="button"
+                      (click)="copyText('invoke-' + activeSkill.id, activeSkill.slash)"
+                      class="inline-flex items-center gap-1 text-xs font-mono text-emerald-400 hover:text-emerald-300 cursor-pointer"
+                    >
+                      <mat-icon class="!w-3.5 !h-3.5 !text-[14px] !leading-3.5">content_copy</mat-icon>
+                      <span>{{ copiedKey() === 'invoke-' + activeSkill.id ? 'Copied' : 'Copy Command' }}</span>
+                    </button>
+                  </div>
+                  <pre class="p-3.5 bg-slate-950 border border-slate-800 rounded-lg text-xs font-mono text-emerald-300 overflow-x-auto"># In OpenCode TUI or Google Antigravity IDE Chat:
+{{ activeSkill.slash }}
+
+# Or via OpenCode CLI:
+opencode run {{ activeSkill.slash }}</pre>
+                </div>
+
+                <!-- Step-by-Step Execution Protocol -->
+                <div class="space-y-2.5">
+                  <h4 class="text-xs font-semibold text-slate-300">
+                    Execution Protocol ({{ activeSkill.executionProtocol.length }} Mandatory Steps)
+                  </h4>
+                  <ol class="space-y-2 text-xs text-slate-300 leading-relaxed">
+                    @for (step of activeSkill.executionProtocol; track step; let i = $index) {
+                      <li class="flex items-start gap-2.5">
+                        <span class="font-mono text-emerald-400 font-semibold tabular-nums shrink-0">{{ i + 1 }}.</span>
+                        <span>{{ step }}</span>
+                      </li>
+                    }
+                  </ol>
+                </div>
+
+                <!-- Clean-Room Rules & Acceptance Gate -->
+                <div class="border-t border-slate-800 pt-4 space-y-3">
+                  <div>
+                    <h4 class="text-xs font-semibold text-slate-300">Clean-Room Guardrails</h4>
+                    <ul class="mt-1.5 space-y-1 text-xs text-slate-400">
+                      @for (rule of activeSkill.cleanRoomRules; track rule) {
+                        <li class="flex items-start gap-2">
+                          <span class="text-slate-500">·</span>
+                          <span>{{ rule }}</span>
+                        </li>
+                      }
+                    </ul>
+                  </div>
+
+                  <div class="p-3.5 bg-slate-950 border border-slate-800 rounded-lg">
+                    <span class="text-xs font-semibold text-emerald-300 block">Stage Acceptance Gate</span>
+                    <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+                      {{ activeSkill.acceptanceGate }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            } @else {
+              <!-- Raw SKILL.md View -->
+              <div class="space-y-2">
+                <div class="flex items-center justify-between text-xs text-slate-400">
+                  <span class="font-mono">.opencode/skills/{{ activeSkill.id }}/SKILL.md &amp; .agents/skills/{{ activeSkill.id }}/SKILL.md</span>
+                  <span>Universal Markdown Specification</span>
+                </div>
+                <pre class="p-4 bg-slate-950 border border-slate-800 rounded-lg text-xs font-mono text-slate-200 overflow-x-auto max-h-[540px] leading-relaxed">{{ activeSkill.skillMarkdown }}</pre>
+              </div>
+            }
+          </div>
+        </div>
+      }
+    </section>
+
+    <!-- =======================================================================
+         SECTION 3: DETERMINISTIC PYTHON 3.8+ VERIFIERS (ZERO DEPENDENCIES)
+    ======================================================================= -->
+    <section id="verifiers" class="scroll-mt-24 space-y-6">
+      <div class="border-b border-slate-800 pb-5">
+        <h2 class="text-2xl font-bold text-white font-display tracking-tight">
+          03. Five Deterministic Python Verifiers
+        </h2>
+        <p class="text-sm text-slate-400 mt-1 max-w-[72ch]">
+          LLMs are bad at counting characters, computing weighted math, and spotting subtle layout drift. These 5
+          standard-library Python scripts (<code class="font-mono text-slate-200">exit_code: 0 | 1</code>) act as hard
+          gates inside <code class="font-mono text-slate-200">/replica-diff</code>,
+          <code class="font-mono text-slate-200">/replica-entrepreneur</code>,
+          <code class="font-mono text-slate-200">/replica-launch</code>, and
+          <code class="font-mono text-slate-200">/replica-deploy</code>.
+        </p>
+      </div>
+
+      <!-- Verifier Selector Tabs -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2.5" role="tablist" aria-label="Python Verifier Scripts">
+        @for (v of verifiers; track v.id; let idx = $index) {
+          <button
+            type="button"
+            role="tab"
+            [attr.aria-selected]="selectedVerifier().id === v.id"
+            (click)="selectVerifier(v.id)"
+            [class]="selectedVerifier().id === v.id
+              ? 'px-3.5 py-2.5 rounded-lg text-xs font-mono font-semibold bg-emerald-500 text-slate-950 transition-colors whitespace-nowrap truncate cursor-pointer text-left'
+              : 'px-3.5 py-2.5 rounded-lg text-xs font-mono font-medium bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 transition-colors whitespace-nowrap truncate cursor-pointer text-left'"
+          >
+            0{{ idx + 1 }}. {{ v.filename }} · {{ v.slashCommand }}
+          </button>
+        }
+      </div>
+
+      <!-- Selected Verifier Specification & Source Code -->
+      @let activeVerifier = selectedVerifier();
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <div class="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-xl p-6 space-y-5">
+          <div class="space-y-1.5 border-b border-slate-800 pb-4">
+            <div class="text-xs font-mono text-emerald-400">
+              Bundled in {{ activeVerifier.slashCommand }} · {{ activeVerifier.repoPath }}
+            </div>
+            <h3 class="text-lg font-bold text-white font-display">
+              {{ activeVerifier.filename }} — {{ activeVerifier.title }}
+            </h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              {{ activeVerifier.purpose }}
+            </p>
+          </div>
+
+          <div class="space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold text-slate-300">CLI Invocation</span>
+              <button
+                type="button"
+                (click)="copyText('cli-' + activeVerifier.id, activeVerifier.cliUsage)"
+                class="inline-flex items-center gap-1 text-xs font-mono text-emerald-400 hover:text-emerald-300 cursor-pointer"
+              >
+                <mat-icon class="!w-3.5 !h-3.5 !text-[14px] !leading-3.5">content_copy</mat-icon>
+                <span>{{ copiedKey() === 'cli-' + activeVerifier.id ? 'Copied' : 'Copy CLI' }}</span>
+              </button>
+            </div>
+            <pre class="p-3 bg-slate-950 border border-slate-800 rounded-lg text-xs font-mono text-emerald-300 overflow-x-auto whitespace-pre-wrap">{{ activeVerifier.cliUsage }}</pre>
+          </div>
+
+          <div class="space-y-3 text-xs">
+            <div class="p-3 bg-slate-950 border border-slate-800 rounded-lg">
+              <span class="font-mono font-semibold text-emerald-400 block">Exit Code 0 (PASS)</span>
+              <p class="text-slate-300 mt-1">{{ activeVerifier.exitZeroCondition }}</p>
+            </div>
+            <div class="p-3 bg-slate-950 border border-slate-800 rounded-lg">
+              <span class="font-mono font-semibold text-rose-400 block">Exit Code 1 (BLOCKED)</span>
+              <p class="text-slate-300 mt-1">{{ activeVerifier.exitOneCondition }}</p>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <span class="text-xs font-semibold text-slate-300 block">Standard JSON Output Schema</span>
+            <pre class="p-3 bg-slate-950 border border-slate-800 rounded-lg text-xs font-mono text-slate-300 overflow-x-auto">{{ activeVerifier.sampleOutputJson }}</pre>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-xl p-6 space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-4">
+            <div>
+              <h4 class="text-sm font-semibold text-white font-mono">
+                {{ activeVerifier.repoPath }}
+              </h4>
+              <p class="text-xs text-slate-400">
+                Python 3.8+ standard library · Ready to run offline
+              </p>
+            </div>
+            <div class="flex items-center gap-2">
+              <button
+                type="button"
+                (click)="copyText('py-code-' + activeVerifier.id, activeVerifier.code)"
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-200 bg-slate-950 hover:bg-slate-800 border border-slate-800 rounded-lg transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+              >
+                <mat-icon class="!w-3.5 !h-3.5 !text-[14px] !leading-3.5">
+                  {{ copiedKey() === 'py-code-' + activeVerifier.id ? 'check' : 'content_copy' }}
+                </mat-icon>
+                <span>{{ copiedKey() === 'py-code-' + activeVerifier.id ? 'Copied Script' : 'Copy Python Code' }}</span>
+              </button>
+              <button
+                type="button"
+                (click)="downloadSelectedVerifier()"
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-200 bg-slate-950 hover:bg-slate-800 border border-slate-800 rounded-lg transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+              >
+                <mat-icon class="!w-3.5 !h-3.5 !text-[14px] !leading-3.5">download</mat-icon>
+                <span>Download {{ activeVerifier.filename }}</span>
+              </button>
+            </div>
+          </div>
+
+          <pre class="p-4 bg-slate-950 border border-slate-800 rounded-lg text-xs font-mono text-slate-200 overflow-x-auto max-h-[580px] leading-relaxed">{{ activeVerifier.code }}</pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 4: SHARED REPLICA/ ARTIFACT STATE SPECIFICATION
+    ======================================================================= -->
+    <section id="artifacts" class="scroll-mt-24 space-y-6">
+      <div class="border-b border-slate-800 pb-5">
+        <h2 class="text-2xl font-bold text-white font-display tracking-tight">
+          04. Shared <code class="font-mono text-emerald-400">replica/</code> File-System State Contract
+        </h2>
+        <p class="text-sm text-slate-400 mt-1 max-w-[72ch]">
+          The 11 skills do not rely on fragile chat memory. Every stage reads and writes structured files inside
+          <code class="font-mono text-slate-200">./replica/</code> so you can pause, switch between OpenCode and Google
+          Antigravity, or inspect intermediate artifacts at any point.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <!-- Artifact List -->
+        <div class="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-xl divide-y divide-slate-800/80 overflow-hidden">
+          @for (art of artifactSpecs; track art.id) {
+            <button
+              type="button"
+              (click)="selectArtifact(art.id)"
+              [class]="selectedArtifact().id === art.id
+                ? 'w-full text-left p-3.5 bg-slate-800/70 transition-colors flex items-start justify-between gap-3 cursor-pointer'
+                : 'w-full text-left p-3.5 hover:bg-slate-800/30 transition-colors flex items-start justify-between gap-3 cursor-pointer'"
+            >
+              <div class="min-w-0">
+                <div class="font-mono text-xs font-semibold text-white truncate">
+                  {{ art.path }}
+                </div>
+                <div class="text-[11px] text-slate-400 mt-0.5 truncate">
+                  Produced by {{ art.producedBy }}
+                </div>
+              </div>
+              <span class="text-[11px] font-mono text-slate-400 uppercase shrink-0">
+                {{ art.format }}
+              </span>
+            </button>
+          }
+        </div>
+
+        <!-- Artifact Template Inspector -->
+        <div class="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-xl p-6 space-y-4">
+          @let activeArtifact = selectedArtifact();
+          <div class="flex flex-wrap items-start justify-between gap-4 border-b border-slate-800 pb-4">
+            <div class="space-y-1">
+              <div class="text-xs font-mono text-slate-400">
+                Produced by {{ activeArtifact.producedBy }} · Consumed by {{ activeArtifact.consumedBy }}
+              </div>
+              <h3 class="text-lg font-bold text-white font-mono">
+                {{ activeArtifact.path }}
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                {{ activeArtifact.purpose }}
+              </p>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <button
+                type="button"
+                (click)="copyText('art-' + activeArtifact.id, activeArtifact.templateContent)"
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-200 bg-slate-950 hover:bg-slate-800 border border-slate-800 rounded-lg transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+              >
+                <mat-icon class="!w-3.5 !h-3.5 !text-[14px] !leading-3.5">
+                  {{ copiedKey() === 'art-' + activeArtifact.id ? 'check' : 'content_copy' }}
+                </mat-icon>
+                <span>{{ copiedKey() === 'art-' + activeArtifact.id ? 'Copied Template' : 'Copy Template' }}</span>
+              </button>
+              <button
+                type="button"
+                (click)="downloadSelectedArtifactTemplate()"
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-200 bg-slate-950 hover:bg-slate-800 border border-slate-800 rounded-lg transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+              >
+                <mat-icon class="!w-3.5 !h-3.5 !text-[14px] !leading-3.5">download</mat-icon>
+                <span>Download Template</span>
+              </button>
+            </div>
+          </div>
+
+          <pre class="p-4 bg-slate-950 border border-slate-800 rounded-lg text-xs font-mono text-slate-200 overflow-x-auto max-h-[420px] leading-relaxed">{{ activeArtifact.templateContent }}</pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- QUIET OPEN-SOURCE FOOTER -->
+  <footer class="border-t border-slate-800/80 mt-20 py-8 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+      <div>
+        <span class="font-semibold text-slate-200 font-display">replica-skill</span>
+        <span class="mx-2">·</span>
+        <span>11 Universal Clean-Room Agent Skills for OpenCode &amp; Google Antigravity IDE/CLI</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="/install.sh" target="_blank" rel="noopener" class="hover:text-white transition-colors font-mono">
+          /install.sh
+        </a>
+        <a href="/bundle.sh" target="_blank" rel="noopener" class="hover:text-white transition-colors font-mono">
+          /bundle.sh
+        </a>
+        <a href="/api/manifest" target="_blank" rel="noopener" class="hover:text-white transition-colors font-mono">
+          /api/manifest
+        </a>
+      </div>
+    </div>
+  </footer>
+</div>
